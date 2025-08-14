@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #a78bfa;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #a78bfa;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding-top: 6rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(45deg, #a78bfa, #06b6d4);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  opacity: 0.85;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: #222;
+}
+
+.project-card a {
+  color: #06b6d4;
+  text-decoration: none;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+.contact .btn {
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(45deg, #06b6d4, #a78bfa);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact .btn:hover {
+  opacity: 0.85;
+}
