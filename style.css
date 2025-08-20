@@ -88,44 +88,52 @@ p {
 }
 
 /* Skill */
-.skill-grid{
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 20px;
-}
-.skill-type-grid{
-  display: grid;
-  max-width: 15rem;
-  gap: 1rem;
-}
-.skill-type{
-  background: #1a1a1a;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: 0.3s;
+.skills {
+  color: white;
+  padding: 6rem;
 }
 
-.skill-type:hover {
-  transform: translateY(-5px);
-  background: #222;
+.skills-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* left wide column, right flexible */
+  gap: 20px; /* space between category title and skills */
+  align-items: start;
 }
-.skill-card-grid {
+
+.skill-set {
+  display: contents; /* so title & skills align correctly */
+}
+
+.skill-class {
+  display: flex;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 10px; /* smaller gaps for right side */
 }
 
-.skill-card {
-  background: #1a1a1a;
-  padding: 1rem;
+.skill {
+  background: #111;
+  padding: 10px 15px;
   border-radius: 8px;
-  transition: 0.3s;
+  text-align: center;
 }
 
-.skill-card:hover {
+
+.skill:hover {
   transform: translateY(-5px);
   background: #222;
 }
+
 
 /* Contact */
 .contact {
