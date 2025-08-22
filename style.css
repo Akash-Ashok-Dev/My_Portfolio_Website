@@ -64,7 +64,7 @@ p {
 }
 
 /* Projects */
-.project-grid {
+#project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
@@ -93,7 +93,7 @@ p {
   padding: 6rem;
 }
 
-.skills-grid {
+#skills-grid {
   display: grid;
   grid-template-columns: 200px 1fr; /* left wide column, right flexible */
   gap: 20px; /* space between category title and skills */
@@ -140,7 +140,7 @@ p {
   text-align: center;
 }
 
-.contact .btn {
+.contact #contactBtn {
   padding: 0.7rem 1.5rem;
   background: linear-gradient(45deg, #06b6d4, #a78bfa);
   color: white;
@@ -149,6 +149,64 @@ p {
   transition: 0.3s;
 }
 
-.contact .btn:hover {
+.contact #contactBtn:hover {
   opacity: 0.85;
+}
+
+#popup {
+  display: none; /* hidden initially */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+#popupBox {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 25rem;
+  height: 23rem;
+  text-align: center;
+}
+
+#popupMsg {
+  color: #ddd;
+}
+
+#closeBtn {
+  color: #1abc9c;
+  background: #111;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#closeBtn:hover{
+  transform: translateY(-5px);
+  background: #222;
+}
+
+#contactInfoCollection {
+  display: grid;
+  /*grid-template-columns: repeat(3, 1fr);*/
+  gap: 10px; /* smaller gaps for right side */
+} 
+
+.contactInfo {
+  color: inherit;        /* Makes it the same color as surrounding text */
+  text-decoration: none; /* Removes underline */
+  cursor: pointer;       /* Optional: shows pointer on hover */
+  background: #111;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+.contactInfo:hover {
+  transform: translateY(-5px);
+  background: #222;
 }

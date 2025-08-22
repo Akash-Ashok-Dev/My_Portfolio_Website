@@ -36,7 +36,7 @@
   <!-- Skills Section-->
   <div class="skills">
   <h2>Skills</h2>
-  <div class="skills-grid">
+  <div id="skills-grid">
     
     <!-- General Ability -->
     <div class="skill-set">
@@ -69,7 +69,7 @@
   <!-- Projects Section -->
   <section class="projects" id="projects">
     <h2>Projects</h2>
-    <div class="project-grid">
+    <div id="project-grid">
       <div class="project-card">
         <h3>Linux Hyprland Setup</h3>
         <p>A customized Linux desktop environment with blur & animations.</p>
@@ -92,8 +92,24 @@
   <section class="contact" id="contact">
     <h2>Contact</h2>
     <p>Let’s collaborate or just say hi.</p>
-    <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+    <button id="contactBtn">Contact Me</button>
+      <div id="popup">
+      <div id="popupBox">
+        <div id = "contactInfoCollection">
+          <a href="https://www.linkedin.com/in/akash-ashok-b40798345/" class="contactInfo">LinkedIn</a>
+          <a href="https://leetcode.com/u/Akash_Ashok/" class="contactInfo">LeetCode</a>
+          <a href="https://github.com/Akash-Ashok-Dev" class="contactInfo">GitHub</a>
+          <a href="https://www.instagram.com/akash_ashok_dev/" class="contactInfo">Instagram</a>
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRsqXknnLcWzWdqknKJdRzXFWFSnpdPPbtljbrwZRQwxmZcMRGWJKWgrwKTHXXWFlbqrhVG" class="contactInfo">Email</a>
+          <span id="closeBtn">Close</span>
+        </div>
+        
+      </div>
+    </div>
   </section>
 
+
+
+<script src="script.js"></script>
 </body>
 </html>
