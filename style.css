@@ -145,12 +145,10 @@ p {
   width: 13em;
   align-items:center;
   justify-content:center;
-  box-shadow: 0 0 25px rgba(199, 125, 255, 0.653),
-              0 0 45px rgba(0, 179, 255, 0.406); /* subtle glow */
   transition: all 0.3s ease-in-out;
-  background: rgba(20, 20, 20, 0.9); /* near-black card */
-  border-radius: 15px;
+  border-radius: 25px;
   z-index: -1;
+  background-color: transparent; /* instead of black */
 }
 
 .socialText {
@@ -173,7 +171,7 @@ p {
   height:11em;
   background:linear-gradient(270deg,#03a9f4,#cc39a4,#ffb5d2);
   z-index:-2;
-  box-shadow:inset 0px 0px 180px 5px #2a2a2a;
+  box-shadow:inset 0px 0px 180px 5px #5b5b5b41;
 }
 
 .socialCard {
@@ -184,7 +182,7 @@ p {
   backdrop-filter:blur(5px);
   border:1px solid transparent;
   -webkit-backdrop-filter:blur(5px);
-  background: rgba(20, 20, 20, 0.9);
+  background: rgba(145, 145, 145, 0.192);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -208,6 +206,7 @@ p {
 
 .socialCard:nth-child(3) {
   border-radius:0px;
+  border-top-right-radius: 10px;
 }
 
 .socialCard:nth-child(3) .linkedin {
@@ -217,7 +216,8 @@ p {
 }
 
 .socialCard:nth-child(4) {
-  border-radius:0px;
+  border-radius: 0px;
+  border-bottom-left-radius:10px;
 }
 
 .socialCard:nth-child(4) .discord {
@@ -227,8 +227,7 @@ p {
 }
 
 .socialCard:nth-child(5) {
-  border-bottom-left-radius:10px;
-  border-top-left-radius:0px;
+  border-radius: 0px;
 }
 
 .socialCard:nth-child(5) .github {
@@ -239,6 +238,7 @@ p {
 
 .socialCard:nth-child(6) {
   border-radius:0px;
+  border-bottom-right-radius: 10px;
 }
 
 .socialCard:nth-child(6) .telegram {
@@ -250,9 +250,6 @@ p {
 .social:hover {
   width:14em;
   cursor:pointer;
-  box-shadow: 0 0 35px rgba(199, 125, 255, 0.5),
-              0 0 65px rgba(0, 180, 255, 0.35); /* brighter glow */
-  color: #00b4ff; /* switch text to neon blue */
 }
 
 .social:hover .socialBack {
