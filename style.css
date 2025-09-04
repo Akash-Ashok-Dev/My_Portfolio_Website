@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 * {
   margin: 0;
@@ -62,26 +63,26 @@ p {
 }
 
 /* Projects */
-#project-grid {
+#projectGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   text-align: center;
 }
 
-.project-card {
+.projectCard {
   background: #1a1a1a;
   padding: 1rem;
   border-radius: 8px;
   transition: 0.3s;
 }
 
-.project-card:hover {
+.projectCard:hover {
   transform: translateY(-5px);
   background: #222;
 }
 
-.project-card a {
+.projectCard a {
   color: #06b6d4;
   text-decoration: none;
 }
@@ -133,78 +134,211 @@ p {
 }
 
 
-/* Contact */
-.contact {
-  text-align: center;
+/*Social*/
+.social {
+  position:absolute;
+  top:2050px;
+  left:50%;
+  transform:translate(-50%,-50%);
+  display:flex;
+  flex-wrap:wrap;
+  width: 13em;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 0 25px rgba(199, 125, 255, 0.653),
+              0 0 45px rgba(0, 179, 255, 0.406); /* subtle glow */
+  transition: all 0.3s ease-in-out;
+  background: rgba(20, 20, 20, 0.9); /* near-black card */
+  border-radius: 15px;
+  z-index: -1;
 }
 
-.contact #contactBtn {
-  padding: 0.7rem 1.5rem;
-  background: linear-gradient(45deg, #06b6d4, #a78bfa);
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: 0.3s;
+.socialText {
+  position:absolute;
+  font-family:'Poppins',sans-serif;
+  font-size:1.23em;
+  transition:.4s ease-in-out;
+  color:#BF66FF;
+  text-align:center;
+  font-weight:bold;
+  letter-spacing:0.33em;
+  z-index:1;
 }
 
-.contact #contactBtn:hover {
-  opacity: 0.85;
+.socialBack {
+  position:absolute;
+  border-radius:10px;
+  transform:rotate(90deg);
+  width:7em;
+  height:11em;
+  background:linear-gradient(270deg,#03a9f4,#cc39a4,#ffb5d2);
+  z-index:-2;
+  box-shadow:inset 0px 0px 180px 5px #2a2a2a;
 }
 
-#popup {
-  display: none; /* hidden initially */
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
+.socialCard {
+  width:60px;
+  height:60px;
+  border-top-left-radius:10px;
+  transition:.4s ease-in-out,.2s background-color ease-in-out,.2s background-image ease-in-out;
+  backdrop-filter:blur(5px);
+  border:1px solid transparent;
+  -webkit-backdrop-filter:blur(5px);
+  background: rgba(20, 20, 20, 0.9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-#popupBox {
-  background: #333;
-  padding: 20px;
-  border-radius: 10px;
-  width: 25rem;
-  height: 23rem;
-  text-align: center;
+.socialCard:nth-child(1) .instagram {
+  opacity:0;
+  transition:.2s ease-in-out;
+  fill:#fd58a2;
 }
 
-#popupMsg {
-  color: #ddd;
+.socialCard:nth-child(2) {
+  border-radius:0px;
 }
 
-#closeBtn {
-  color: #1abc9c;
-  background: #111;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-align: center;
+.socialCard:nth-child(2) .twitter {
+  opacity:0;
+  transition:.2s ease-in-out;
+  fill:#eaeaea;
 }
 
-#closeBtn:hover{
-  transform: translateY(-5px);
-  background: #222;
+.socialCard:nth-child(3) {
+  border-radius:0px;
 }
 
-#contactInfoCollection {
-  display: grid;
-  /*grid-template-columns: repeat(3, 1fr);*/
-  gap: 10px; /* smaller gaps for right side */
-} 
-
-.contactInfo {
-  color: inherit;        /* Makes it the same color as surrounding text */
-  text-decoration: none; /* Removes underline */
-  cursor: pointer;       /* Optional: shows pointer on hover */
-  background: #111;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-align: center;
+.socialCard:nth-child(3) .linkedin {
+  opacity: 0;
+  transition: .2s ease-in-out;
+  fill: #0e76a8;
 }
 
+.socialCard:nth-child(4) {
+  border-radius:0px;
+}
 
-.contactInfo:hover {
-  transform: translateY(-5px);
-  background: #222;
+.socialCard:nth-child(4) .discord {
+  opacity:0;
+  transition:.2s ease-in-out;
+  fill:#8c9eff;
+}
+
+.socialCard:nth-child(5) {
+  border-bottom-left-radius:10px;
+  border-top-left-radius:0px;
+}
+
+.socialCard:nth-child(5) .github {
+  opacity:0;
+  transition:.2s ease-in-out;
+  fill:black;
+}
+
+.socialCard:nth-child(6) {
+  border-radius:0px;
+}
+
+.socialCard:nth-child(6) .telegram {
+  opacity:0;
+  transition:.2s ease-in-out;
+  fill:#29b6f6;
+}
+
+.social:hover {
+  width:14em;
+  cursor:pointer;
+  box-shadow: 0 0 35px rgba(199, 125, 255, 0.5),
+              0 0 65px rgba(0, 180, 255, 0.35); /* brighter glow */
+  color: #00b4ff; /* switch text to neon blue */
+}
+
+.social:hover .socialBack {
+  opacity:0;
+}
+
+.social:hover .socialCard {
+  margin:.2em;
+  border-radius:10px;
+  box-shadow:0 4px 30px rgba(139, 139, 139, 0.1);
+  border:1px solid rgba(255,255,255,0.3);
+  background:rgba(255,255,255,0.2);
+}
+
+.social:hover .socialText {
+  opacity:0;
+  z-index:-2;
+}
+
+.social:hover .instagram {
+  opacity:1;
+}
+.social:hover .twitter {
+  opacity:1;
+}
+.social:hover .linkedin {
+  opacity:1;
+}
+.social:hover .discord {
+  opacity:1;
+}
+.social:hover .github {
+  opacity:1;
+}
+.social:hover .telegram {
+  opacity:1;
+}
+
+.socialCard:nth-child(1):hover {
+  background-color:#cc39a4;
+}
+.socialCard:nth-child(1):hover .instagram {
+  fill:white;
+}
+
+.socialCard:nth-child(2):hover {
+  background-color:#1a1c1d;
+}
+.socialCard:nth-child(2):hover .twitter {
+  fill:white;
+}
+
+.socialCard:nth-child(3):hover {
+  background-color: #0e76a8;
+}
+.socialCard:nth-child(3):hover .linkedin {
+  fill: white;
+}
+
+@keyframes backgroundIMG {
+  100% {
+  background-image:linear-gradient(#BF66FF,#6248FF,#00DDEB);
+}
+}.socialCard:nth-child(4):hover {
+  background-color:#8c9eff;
+}
+.socialCard:nth-child(4):hover .discord {
+  fill:white;
+}
+
+.socialCard:nth-child(5):hover {
+  background-color:black;
+}
+.socialCard:nth-child(5):hover .github {
+  fill:white;
+}
+
+.socialCard:nth-child(6):hover {
+  background-color:#29b6f6;
+}
+.socialCard:nth-child(6):hover .telegram > path:nth-of-type(1) {
+  fill:white;
+}
+.socialCard:nth-child(6):hover .telegram > path:nth-of-type(2) {
+  fill:#29b6f6;
+}
+.socialCard:nth-child(6):hover .telegram > path:nth-of-type(3) {
+  fill:#29b6f6;
 }
