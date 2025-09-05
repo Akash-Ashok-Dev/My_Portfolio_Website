@@ -137,18 +137,17 @@ p {
 /*Social*/
 .social {
   position:absolute;
-  top:2050px;
+  top:2100px;
   left:50%;
   transform:translate(-50%,-50%);
   display:flex;
   flex-wrap:wrap;
-  width: 13em;
+  width: 14em;
   align-items:center;
   justify-content:center;
   transition: all 0.3s ease-in-out;
-  border-radius: 25px;
+  border-radius: 15px;
   z-index: -1;
-  background-color: transparent; /* instead of black */
 }
 
 .socialText {
@@ -169,9 +168,11 @@ p {
   transform:rotate(90deg);
   width:7em;
   height:11em;
-  background:linear-gradient(270deg,#03a9f4,#cc39a4,#ffb5d2);
-  z-index:-2;
+  background:linear-gradient(270deg,#03a9f4,#ff03dd,#8610fd);
+  z-index:-3;
   box-shadow:inset 0px 0px 180px 5px #5b5b5b41;
+  opacity:0.1;
+  pointer-events: none;
 }
 
 .socialCard {
@@ -309,11 +310,7 @@ p {
   fill: white;
 }
 
-@keyframes backgroundIMG {
-  100% {
-  background-image:linear-gradient(#BF66FF,#6248FF,#00DDEB);
-}
-}.socialCard:nth-child(4):hover {
+.socialCard:nth-child(4):hover {
   background-color:#8c9eff;
 }
 .socialCard:nth-child(4):hover .discord {
