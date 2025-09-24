@@ -136,8 +136,8 @@ p {
 
 /*Social*/
 .social {
-  position:absolute;
-  top:2100px;
+  position:relative;
+  top:100px;
   left:50%;
   transform:translate(-50%,-50%);
   display:flex;
@@ -147,7 +147,7 @@ p {
   justify-content:center;
   transition: all 0.3s ease-in-out;
   border-radius: 15px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .socialText {
